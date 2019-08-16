@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="372dp"
+        android:layout_height="468dp"
+
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="20dp"
+        card_view:layout_constraintBottom_toBottomOf="@+id/btnCikis"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.333"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="336dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_txtProfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtProfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="Profil :" />
+
+                <ListView
+                    android:id="@+id/liste1"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_txtIletisimeGec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtIletisimeGec"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:text="Bizimle İletişime Geçin :" />
+
+                <ListView
+                    android:id="@+id/liste2"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_txtGelistiriciler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtGelistiriciler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:text="Geliştiriciler :" />
+
+                <ListView
+                    android:id="@+id/liste3"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCikis"
+        android:layout_width="214dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:text="Çıkış Yap"
+        android:onClick="cikisyap"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>
